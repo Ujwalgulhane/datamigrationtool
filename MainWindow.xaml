@@ -1,0 +1,82 @@
+﻿<Window x:Class="mydatamigration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Data Migration Tool - Login"
+        Height="549" Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Icon="resources/elablogo.png">
+    <Grid>
+        <Grid Background="#f4f4f4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="600"/>
+            </Grid.ColumnDefinitions>
+            <!-- Header -->
+            <Border Background="#FF092E4B" Height="100" VerticalAlignment="Top" Margin="0,0,-0.4,0">
+                <TextBlock Text="Data Migration Tool"
+                       Foreground="White"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center" Margin="182,26,176.6,42" Width="235" />
+            </Border>
+
+            <!-- Main Login Form -->
+            <Border Background="White" CornerRadius="10"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="400" Padding="20" Margin="97,71,96.6,80.8" Height="369">
+                <StackPanel>
+                    <!-- Title -->
+                    <TextBlock Text="Login"
+                           FontSize="20" FontWeight="Bold"
+                           Foreground="#333"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20" />
+
+                    <!-- Username Field -->
+                    <StackPanel Margin="0,10">
+                        <TextBlock Text="Username" FontSize="14" Foreground="#666" Height="25" />
+                        <TextBox Name="UsernameTextBox"
+                             Height="35" FontSize="14"
+                             Padding="5"  />
+                    </StackPanel>
+
+                    <!-- Password Field -->
+                    <StackPanel Margin="0,10">
+                        <TextBlock Text="Password" FontSize="14" Foreground="#666" Height="25" />
+                        <PasswordBox Name="PasswordBox"
+                                 Height="35" FontSize="14"
+                                 Padding="5" />
+                    </StackPanel>
+
+                    <!-- Login Button -->
+                    <Button Content="Login"
+                        Name="LoginButton"
+                        Width="150" Height="40"
+                        Background="#FF092E4B"
+                        Foreground="White"
+                        FontSize="16" FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        Margin="0,20"
+                        Click="LoginButton_Click" Cursor="Hand" />
+
+                    <!-- Footer -->
+                    <TextBlock Text="© 2024 Data Migration Tool"
+                           FontSize="12" Foreground="#999"
+                           HorizontalAlignment="Center"
+                           Margin="0,20,0,0" />
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid x:Name="PreloaderOverlay" Background="#80000000" Visibility="Collapsed">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Animated Spinner -->
+            <ProgressBar IsIndeterminate="True" Width="100" Height="10" Foreground="#3498db" />
+            <TextBlock Text="Logging in, please wait..." Foreground="White" Margin="0,20,0,0" FontSize="14" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="mydatamigration.includes.DatabaseConnectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Database Connectivity Setup"
+        Height="600.763" Width="708"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"  Icon="../resources/elablogo.png">
+    <Grid Background="#f4f4f4" Margin="0,0,-6.4,-3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="175*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Header -->
+        <Border Background="#FF092E4B" Margin="0,0,0,516.2" Grid.ColumnSpan="2">
+            <TextBlock Text="Database Connectivity Setup"
+                       Foreground="White"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center" />
+        </Border>
+
+        <!-- Database Connection Form -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="404" Height="490" Margin="140,0,140,26.2" Grid.Column="1">
+            <TextBlock Text="Database Configuration"
+                       FontSize="20" FontWeight="Bold"
+                       Foreground="#333"
+                       Margin="89,20,88,20" />
+
+            <!-- Server Field -->
+            <TextBlock Text="Server Name" FontSize="14" Foreground="#666" />
+            <TextBox Name="ServerTextBox" Height="35" FontSize="14" Padding="5" Margin="0,10,0,20" />
+
+
+
+            <!-- Username Field -->
+            <TextBlock Text="Username" FontSize="14" Foreground="#666" />
+            <TextBox Name="DbUsernameTextBox" Height="35" FontSize="14" Padding="5" Margin="0,10,0,20" />
+
+            <!-- Password Field -->
+            <TextBlock Text="Password" FontSize="14" Foreground="#666" />
+            <PasswordBox Name="DbPasswordBox" Height="35" FontSize="14" Padding="5" Margin="0,10,0,20" />
+            <Button Content="Test Connection" Height="32"
+                    Background="#FF092E4B"
+                    Foreground="White"
+                    FontSize="14" FontWeight="Bold"
+                    Click="Test_Click" Cursor="Hand" Margin="258,0,0.2,0"   />
+
+            <TextBlock Text="Select Database" FontSize="14" Foreground="#666" Margin="0,10,0,0" />
+            <ComboBox Name="DatabaseComboBox" Height="35" FontSize="14" Padding="5" Margin="0,10,0,20" Cursor="Hand" />
+            <Button Content="Save Configuration"
+                    Width="145" Height="32"
+                    Background="#FF092E4B"
+                    Foreground="White"
+                    FontSize="14" FontWeight="Bold"
+                    Click="SaveConfiguration_Click" Cursor="Hand" Margin="0,0,0.2,0" HorizontalAlignment="Right" />
+            <!-- 
+            <TextBlock Text="Select Database" FontSize="14" Foreground="#666" Margin="0,10,0,5" />
+            <ComboBox Name="DatabaseComboBox" Height="35" FontSize="14" Padding="5" Margin="0,10,0,20" Cursor="Hand" />
+            -->
+            <!-- Save Button -->
+        </StackPanel>
+    </Grid>
+</Window>
