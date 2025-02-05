@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Threading.Tasks;
 using mydatamigration.includes;
+using mydatamigration.dashboard;
+
 namespace mydatamigration
 {
     /// <summary>

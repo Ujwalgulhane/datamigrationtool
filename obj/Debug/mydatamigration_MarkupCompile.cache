@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ujwal\source\repos\mydatamigration\App.xaml
-3-432260819
+51073267208
 
-81161603501
-15730729526
-MainWindow.xaml;includes\DatabaseConnectionWindow.xaml;dashboard\DashboardWindow.xaml;
+101516894344
+35-873390181
+dashboard\DashboardWindow.xaml;MainWindow.xaml;includes\DatabaseConnectionWindow.xaml;migrationdata\MigrationDataWindow.xaml;migrationtask\MigrationTaskWindow.xaml;
 
 False
 
